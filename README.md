@@ -1,6 +1,8 @@
 # HydrixOS
 
-This repository contains the latest source code of HydrixOS. I've published it for anyone interested in low-level programming. Please be careful: I've started it as a pure hobbyist project when I was 16 years old. So please: don't consider it as an example for high quality C code or operating systems design ;).
+This repository contains the latest source code of HydrixOS. I've published it for anyone interested in low-level programming. 
+
+*Please be careful:* I've started it as a pure hobbyist project when I was 16 years old and stopped it in 2006. *So please:* don't consider it as an example for high quality C code or well operating systems design ;).
 
 ## Licensing
 

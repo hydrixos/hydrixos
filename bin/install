@@ -1,0 +1,6 @@
+#!/bin/sh
+mount floppy
+rm -f floppy/boot/*.bin
+cp *.bin floppy/boot/
+umount floppy
+

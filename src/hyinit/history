@@ -1,0 +1,22 @@
+History of hyinit
+===================================================
+
+Version 0.0.4 (In Progress)
+---------------------------
+Fixing some minor bugs					(FG)
+Moving from uint8_t to utf8_t				(FG)
+
+
+Version 0.0.3 (11.6.2006)
+-------------------------
+Seperated init code for forked processes		(FG)
+
+Version 0.0.2 (28.5.2006)
+-------------------------
+Preliminary start up code				(FG)
+Preliminary process forking for init			(FG)
+Preliminary core debugger				(FG)
+
+Version 0.0.1 (27.12.2004)
+--------------------------
+Simple start up code					(FG)

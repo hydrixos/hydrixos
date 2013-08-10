@@ -1,0 +1,12 @@
+History of hyCoreDebugLib
+===================================================
+
+Version 0.0.2 (14. 8. 2006)
+---------------------------
+Moving from uint8_t to utf8_t					(FG)
+Fixing some minor bugs						(FG)
+
+Version 0.0.1 (28. 5. 2006)
+---------------------------
+First release							(FG)
+

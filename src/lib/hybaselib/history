@@ -1,0 +1,30 @@
+History of hyBaseLib
+===================================================
+
+Version 0.0.5 (In Progress)
+---------------------------
+Fixing some minor bugs							(FG)
+Moving from uint8_t to utf8_t as charracter type			(FG)
+Several changes on the XML parser					(FG)
+
+Version 0.0.4 (30.7.2006)
+-------------------------
+Adding the simple XML parser						(FG)
+
+Version 0.0.3 (10.6.2006)
+-------------------------
+Merging vfsmem_* into hyBaseLib as pmap_*				(FG)
+
+Version 0.0.2 (28.5.2006)
+-------------------------
+Mutex timeouts now declared in milliseconds				(FG)
+Fixed hysys_*-Memory calls						(FG)
+Intrucing latency-bit to mutexes					(FG)
+Intrucing MTX_UNLIMITED and MTX_NO_TIMEOUT macros			(FG)
+Making asm statements more "__volatile__"				(FG)
+No error if str_* terminates before finding the terminating char	(FG)
+
+Version 0.0.1 (18. 10. 2005)
+----------------------------
+First release								(FG)
+

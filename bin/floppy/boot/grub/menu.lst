@@ -1,0 +1,11 @@
+#
+# Use this file as the menu.lst boot information of
+# your GRUB installation to boot HydrixOS from
+# a diskette.
+#
+default 0
+timeout 10
+
+title HydrixOS Kernel
+kernel --type=multiboot (fd0)/boot/hymk.bin
+module (fd0)/boot/hyinit.bin

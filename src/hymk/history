@@ -1,0 +1,52 @@
+History of hymk
+===================================================
+
+Version 0.0.3 (In Progress)
+---------------------------
+Fixing some minor bugs							(FG)
+Fixing a memory leak in unmap						(FG)	25.10.2007
+
+Version 0.0.2 (28.5.2006)
+-------------------------
+Don't awake waiting threads by recv_softints				(FG)
+Fixing ksched_stop_thread not to stop already stopped threads		(FG)
+Do Copy-On-Write if a COW page should be mapped				(FG)
+Splitting kmem_copy_on_write to kmem_do_copy_on_write			(FG)
+Adding the test_page system call					(FG)
+Fixing memory access setup for the threads of new process subjects 	(FG)
+Introducing MAP_REVERSE							(FG)
+Fixing exception-redirection						(FG)
+Allow the freezing of busy threads					(FG)
+Changing page usage counter for init module pages			(FG)
+Enabling page mapping for pages starting from 1 MiB			(FG)
+Save the time of creation of a process or thread in its descriptor	(FG)
+Fixing different bugs during documentation of source code		(FG)
+New free memory allocation using stacks					(FG)
+Support for high_mem (mem > 896 MiB)					(FG)
+"kmem_map_page_frame": Fixing the release of unused page frames		(FG)
+Auto-Detect PTE Global Extension (PGE)					(FG)
+New page frame managment						(FG)
+Copy-On-Write support completed						(FG)
+TLB invalidation fixed in sysc_map, sysc_unmap, kmem_map_page_frame	(FG)
+Page status counter fixed in sysc_unmap, kmem_map_page_frame		(FG)
+Reducing TIMER_FREQUENCY to 1 kHz					(FG)
+Duplicating effective priority						(FG)
+Disabling invalid access to the idle thread				(FG)
+Time out handling for sync and recv_softint				(FG)
+Fixing some bugs							(PO)
+Performance-Fix using KSCHED_TRY_RESCHED				(FG + PO)
+Fixing a bug with the GRUB multiboot header				(FG)
+Fixing a bug with the init image loader					(FG)
+Changing the restrictions of "destroy_subject"				(FG)
+Introducing MAP_PAGED							(FG)
+Extending the meaning of (UNMAP_COMPLETE) for MAP_PAGED			(FG)
+Implementing the missing priviledge restrictions for map()		(FG)
+Extending recv_softints with RECV_TRACE_SYSCALL				(FG)
+Fixing the INVLPG bug: INVPLG uses a *virtual* address ...grr...	(FG)
+Fixing some bugs in the Copy-On-Write-Handling				(FG)
+Fixing the missing page usage counter for the pages of the init image	(FG)
+Making asm statements more "__volatile__"				(FG)
+
+Version 0.0.1 (27.12.2004)
+--------------------------
+Implementation of the first hymk					(FG)

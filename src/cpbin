@@ -1,0 +1,5 @@
+#!/bin/sh
+mount /mnt/extfd
+cp ../bin/*.bin /mnt/extfd/boot/
+umount /mnt/extfd
+

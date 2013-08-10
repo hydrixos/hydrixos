@@ -1,0 +1,11 @@
+Init Boot ABI
+-------------
+
+Register Startup:
+=================
+The hymk will set the registers of the first thread of init to this values:
+
+	EAX	Start address of static init code and data
+	EBX	Count of pages of static init code and data
+	ECX	0
+	EDX	0

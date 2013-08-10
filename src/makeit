@@ -1,0 +1,27 @@
+#!/bin/sh
+cd ../bin
+rm -f *.bin
+cd ../lib
+rm -f *.a
+rm -f *.o
+
+cd ../src
+
+cd hymk
+make all
+cd ..
+
+cd lib/hybaselib
+make all
+cd ../..
+
+cd lib/hycoredebuglib
+make all
+cd ../..
+
+cd hyinit
+make all
+cd ..
+
+cd ../bin
+./install

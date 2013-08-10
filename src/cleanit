@@ -1,0 +1,22 @@
+cd ../bin
+rm -f *.bin
+cd ../lib
+rm -f *.a
+rm -f *.o
+cd ../src
+
+cd hymk
+make cleanall
+cd ..
+
+cd hyinit
+make cleanall
+cd ..
+
+cd lib/hybaselib
+make cleanall
+cd ../..
+
+cd lib/hycoredebuglib
+make cleanall
+cd ../..

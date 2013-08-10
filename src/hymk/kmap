@@ -1,0 +1,787 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+i386_esp0_ret       0x4               x86/tss.o
+high_zone           0x10              x86/meminit.o
+normal_zone         0x10              x86/meminit.o
+ksched_irqt_s       0xc0              x86/intr.o
+ksched_idle_thread  0x4               x86/schedule.o
+i386_tss_struct     0x4               x86/tss.o
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/init.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/kprintf.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/string.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/modules.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/meminit.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/page.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/alloc.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/info.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/tss.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/frame.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/intr.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/subject.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/schedule.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/current.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/paged.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/security.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/map.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/sync.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/io.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/remote.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 x86/timeout.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .text set to 0x100000
+LOAD x86/start.o
+LOAD x86/init.o
+LOAD x86/kprintf.o
+LOAD x86/string.o
+LOAD x86/modules.o
+LOAD x86/meminit.o
+LOAD x86/page.o
+LOAD x86/alloc.o
+LOAD x86/info.o
+LOAD x86/tss.o
+LOAD x86/frame.o
+LOAD x86/irq.o
+LOAD x86/intr.o
+LOAD x86/subject.o
+LOAD x86/schedule.o
+LOAD x86/current.o
+LOAD x86/sysc.o
+LOAD x86/paged.o
+LOAD x86/security.o
+LOAD x86/map.o
+LOAD x86/sync.o
+LOAD x86/io.o
+LOAD x86/remote.o
+LOAD x86/timeout.o
+                0x0000000008048000                PROVIDE (__executable_start, 0x8048000)
+                0x00000000080480b4                . = (0x8048000 + SIZEOF_HEADERS)
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.dyn        0x00000000080480b4        0x0
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ .rel.text      0x0000000000000000        0x0 x86/start.o
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x0000000000100000     0x9f8d
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000100000      0x8c0 x86/start.o
+                0x00000000001008b6                i386_idt_des_new
+                0x00000000001008bc                i386_boot_info
+                0x0000000000100060                i386_gdt_s
+                0x0000000000100000                _start
+                0x00000000001000a0                i386_idt_s
+                0x0000000000100000                start
+                0x00000000001008a8                i386_gdt_des_new
+ .text          0x00000000001008c0      0x222 x86/init.o
+                0x00000000001008c0                main
+ *fill*         0x0000000000100ae2        0xe 90909090
+ .text          0x0000000000100af0      0xa06 x86/kprintf.o
+                0x0000000000100b70                vsnprintf
+                0x0000000000100af0                kclrscr
+                0x00000000001010b0                kprintf
+ *fill*         0x00000000001014f6        0xa 90909090
+ .text          0x0000000000101500       0x7c x86/string.o
+                0x0000000000101500                strcpy
+                0x0000000000101550                memcpy
+                0x0000000000101530                strlen
+ *fill*         0x000000000010157c        0x4 90909090
+ .text          0x0000000000101580      0x2c2 x86/modules.o
+                0x0000000000101580                kmod_init
+ *fill*         0x0000000000101842        0xe 90909090
+ .text          0x0000000000101850      0x341 x86/meminit.o
+                0x0000000000101850                kmem_init_tables
+ *fill*         0x0000000000101b91        0xf 90909090
+ .text          0x0000000000101ba0      0x5f8 x86/page.o
+                0x0000000000102130                kmem_map_page_frame_cur
+                0x0000000000101ee0                kmem_switch_krnl_spc
+                0x0000000000101ea0                kmem_copy_on_write
+                0x0000000000101cd0                kmem_create_space
+                0x0000000000101d10                kmem_do_copy_on_write
+                0x0000000000101f60                kmem_map_page_frame
+                0x0000000000101ed0                kmem_destroy_space
+                0x0000000000101ba0                kmem_init_krnl_spc
+ *fill*         0x0000000000102198        0x8 90909090
+ .text          0x00000000001021a0      0x5df x86/alloc.o
+                0x0000000000102230                kmem_alloc_user_pageframe
+                0x0000000000102400                kmem_free_user_pageframe
+                0x00000000001025a0                sysc_alloc_pages
+                0x00000000001021a0                kmem_alloc_kernel_pageframe
+                0x0000000000102360                kmem_free_kernel_pageframe
+ *fill*         0x000000000010277f        0x1 90909090
+ .text          0x0000000000102780      0x567 x86/info.o
+                0x00000000001028d0                kinfo_new_descr
+                0x0000000000102780                kinfo_init_387_fpu
+                0x00000000001027d0                kinfo_del_descr
+                0x00000000001029c0                kinfo_init
+                0x0000000000102bf0                kinfo_init_x86_cpu
+ *fill*         0x0000000000102ce7        0x9 90909090
+ .text          0x0000000000102cf0      0x19f x86/tss.o
+                0x0000000000102cf0                ksched_init_tss
+ *fill*         0x0000000000102e8f        0x1 90909090
+ .text          0x0000000000102e90       0xe9 x86/frame.o
+                0x0000000000102f60                ksched_del_stack
+                0x0000000000102f70                ksched_new_stack
+                0x0000000000102e90                ksched_init_stack
+ *fill*         0x0000000000102f79        0x3 90909090
+ .text          0x0000000000102f7c     0x106b x86/irq.o
+                0x0000000000102f90                i386_saved_error_cs
+                0x0000000000103d89                i386_exhandleasm_26
+                0x00000000001032e5                i386_irqhandleasm_14
+                0x0000000000103221                i386_irqhandleasm_10
+                0x0000000000103e53                i386_exhandleasm_28
+                0x00000000001031bf                i386_irqhandleasm_8
+                0x000000000010379e                i386_exhandleasm_11
+                0x0000000000103997                i386_exhandleasm_16
+                0x00000000001032b4                i386_irqhandleasm_13
+                0x0000000000102f8c                i386_saved_error_code
+                0x0000000000102f84                i386_old_stack_pointer
+                0x00000000001034db                i386_exhandleasm_4
+                0x00000000001036d4                i386_exhandleasm_9
+                0x00000000001035a5                i386_exhandleasm_6
+                0x0000000000103868                i386_exhandleasm_13
+                0x0000000000103c5a                i386_exhandleasm_23
+                0x0000000000103016                i386_emptyint_handler
+                0x00000000001030d9                i386_irqhandleasm_3
+                0x0000000000103411                i386_exhandleasm_2
+                0x000000000010307d                i386_irqhandleasm_1
+                0x0000000000103932                i386_exhandleasm_15
+                0x0000000000103eb8                i386_exhandleasm_29
+                0x0000000000103f1d                i386_exhandleasm_30
+                0x0000000000103252                i386_irqhandleasm_11
+                0x0000000000103163                i386_irqhandleasm_6
+                0x0000000000103107                i386_irqhandleasm_4
+                0x000000000010304f                i386_irqhandleasm_0
+                0x0000000000103ac6                i386_exhandleasm_19
+                0x00000000001038cd                i386_exhandleasm_14
+                0x0000000000103b90                i386_exhandleasm_21
+                0x0000000000103476                i386_exhandleasm_3
+                0x00000000001039fc                i386_exhandleasm_17
+                0x0000000000102fa4                i386_do_context_switch
+                0x0000000000103bf5                i386_exhandleasm_22
+                0x0000000000103191                i386_irqhandleasm_7
+                0x0000000000103135                i386_irqhandleasm_5
+                0x0000000000102f88                i386_saved_last_block
+                0x000000000010366f                i386_exhandleasm_8
+                0x0000000000103003                i386_yield_kernel_thread
+                0x0000000000103b2b                i386_exhandleasm_20
+                0x0000000000103316                i386_irqhandleasm_15
+                0x0000000000102f94                i386_saved_error_eip
+                0x0000000000103cbf                i386_exhandleasm_24
+                0x0000000000103347                i386_exhandleasm_0
+                0x00000000001030ab                i386_irqhandleasm_2
+                0x0000000000102f9c                i386_saved_error_num
+                0x0000000000102f98                i386_saved_error_esp
+                0x0000000000103dee                i386_exhandleasm_27
+                0x0000000000103f82                i386_exhandleasm_31
+                0x0000000000102f80                i386_new_stack_pointer
+                0x0000000000103a61                i386_exhandleasm_18
+                0x0000000000103283                i386_irqhandleasm_12
+                0x00000000001031f0                i386_irqhandleasm_9
+                0x0000000000103803                i386_exhandleasm_12
+                0x0000000000103540                i386_exhandleasm_5
+                0x0000000000102fa0                i386_error_kernel_esp
+                0x0000000000103d24                i386_exhandleasm_25
+                0x000000000010360a                i386_exhandleasm_7
+                0x0000000000103739                i386_exhandleasm_10
+                0x00000000001033ac                i386_exhandleasm_1
+ *fill*         0x0000000000103fe7        0x9 90909090
+ .text          0x0000000000103ff0     0x1788 x86/intr.o
+                0x0000000000103ff0                ksched_disable_irq
+                0x0000000000104040                ksched_enable_irq
+                0x0000000000104190                ksched_init_ints
+                0x00000000001040c0                ksched_handle_irq
+                0x00000000001040a0                i386_handle_emptyint
+                0x0000000000105390                ksched_handle_except
+                0x0000000000104080                ksched_do_panic
+ *fill*         0x0000000000105778        0x8 90909090
+ .text          0x0000000000105780      0xd73 x86/subject.o
+                0x0000000000105780                sysc_create_thread
+                0x00000000001059e0                sysc_set_controller
+                0x0000000000105a90                sysc_destroy_subject
+                0x0000000000106270                ksysc_create_init
+                0x0000000000105ec0                sysc_create_process
+                0x00000000001063f0                ksysc_create_idle
+ *fill*         0x00000000001064f3        0xd 90909090
+ .text          0x0000000000106500      0x6c3 x86/schedule.o
+                0x00000000001069f0                sysc_awake_subject
+                0x00000000001065c0                ksched_stop_thread
+                0x0000000000106620                ksched_idle_loop
+                0x0000000000106760                sysc_yield_thread
+                0x0000000000106500                ksched_start_thread
+                0x0000000000106820                sysc_freeze_subject
+                0x0000000000106630                sysc_set_priority
+ *fill*         0x0000000000106bc3        0xd 90909090
+ .text          0x0000000000106bd0      0x30e x86/current.o
+                0x0000000000106d50                ksched_enter_main_loop
+                0x0000000000106bd0                ksched_next_thread
+ *fill*         0x0000000000106ede        0x2 90909090
+ .text          0x0000000000106ee0      0x9ff x86/sysc.o
+                0x000000000010717a                i386_sysc_freeze_subject
+                0x00000000001074f3                i386_sysc_sync
+                0x0000000000106fc0                i386_sysc_create_process
+                0x0000000000106ee0                i386_sysc_alloc_pages
+                0x0000000000107330                i386_sysc_allow
+                0x0000000000107724                i386_sysc_read_regs
+                0x00000000001072c1                i386_sysc_set_priority
+                0x00000000001071e7                i386_sysc_awake_subject
+                0x000000000010709f                i386_sysc_destroy_subject
+                0x0000000000107032                i386_sysc_set_controller
+                0x000000000010786d                i386_sysc_test_page
+                0x0000000000107254                i386_sysc_yield_thread
+                0x0000000000106f4e                i386_sysc_create_thread
+                0x0000000000107412                i386_sysc_unmap
+                0x0000000000107804                i386_sysc_set_paged
+                0x00000000001073a1                i386_sysc_map
+                0x0000000000107792                i386_sysc_write_regs
+                0x000000000010710c                i386_sysc_chg_root
+                0x0000000000107566                i386_sysc_io_allow
+                0x00000000001076b1                i386_sysc_recv_softints
+                0x00000000001075d4                i386_sysc_io_alloc
+                0x0000000000107482                i386_sysc_move
+                0x0000000000107644                i386_sysc_recv_irq
+ *fill*         0x00000000001078df        0x1 90909090
+ .text          0x00000000001078e0      0x493 x86/paged.o
+                0x00000000001078e0                sysc_set_paged
+                0x0000000000107b50                kpaged_send_pagefault
+                0x00000000001079a0                sysc_test_page
+                0x0000000000107c20                kpaged_handle_exception
+ *fill*         0x0000000000107d73        0xd 90909090
+ .text          0x0000000000107d80       0xd2 x86/security.o
+                0x0000000000107d80                sysc_chg_root
+ *fill*         0x0000000000107e52        0xe 90909090
+ .text          0x0000000000107e60      0xd36 x86/map.o
+                0x0000000000108690                sysc_unmap
+                0x0000000000107e60                sysc_allow
+                0x0000000000108030                sysc_map
+                0x0000000000108ad0                sysc_move
+ *fill*         0x0000000000108b96        0xa 90909090
+ .text          0x0000000000108ba0      0x6a5 x86/sync.o
+                0x0000000000108ba0                ksync_removefrom_waitqueue_error
+                0x0000000000108c80                sysc_sync
+                0x0000000000108c40                ksync_interrupt_other
+ *fill*         0x0000000000109245        0xb 90909090
+ .text          0x0000000000109250      0x4b6 x86/io.o
+                0x0000000000109410                sysc_io_alloc
+                0x0000000000109290                ksched_start_irq_handler
+                0x0000000000109540                sysc_recv_irq
+                0x0000000000109330                sysc_io_allow
+                0x0000000000109250                kio_reenable_irq
+ *fill*         0x0000000000109706        0xa 90909090
+ .text          0x0000000000109710      0x5b6 x86/remote.o
+                0x0000000000109850                sysc_read_regs
+                0x00000000001099a0                kremote_received
+                0x0000000000109710                sysc_write_regs
+                0x0000000000109a80                sysc_recv_softints
+ *fill*         0x0000000000109cc6        0xa 90909090
+ .text          0x0000000000109cd0      0x2bd x86/timeout.o
+                0x0000000000109cd0                ksched_add_timeout
+                0x0000000000109e80                ksched_del_timeout
+ *(.text.*personality*)
+ *(.gnu.warning)
+
+.fini
+ *(.fini)
+                0x0000000000109f8d                PROVIDE (__etext, .)
+                0x0000000000109f8d                PROVIDE (_etext, .)
+                0x0000000000109f8d                PROVIDE (etext, .)
+
+.rodata         0x0000000000109f90      0xbc2
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x0000000000109f90       0x30 x86/init.o
+ .rodata.str1.1
+                0x0000000000109fc0        0xf x86/init.o
+ .rodata.str1.1
+                0x0000000000109fcf       0x2b x86/kprintf.o
+ *fill*         0x0000000000109ffa        0x2 00
+ .rodata        0x0000000000109ffc       0x88 x86/kprintf.o
+ .rodata.str1.1
+                0x000000000010a084       0xba x86/modules.o
+ *fill*         0x000000000010a13e        0x2 00
+ .rodata.str1.4
+                0x000000000010a140      0x134 x86/modules.o
+ .rodata.str1.1
+                0x000000000010a274       0x19 x86/meminit.o
+                                         0x4a (size before relaxing)
+ *fill*         0x000000000010a28d        0x3 00
+ .rodata.str1.4
+                0x000000000010a290      0x105 x86/meminit.o
+ *fill*         0x000000000010a395        0x3 00
+ .rodata.str1.4
+                0x000000000010a398       0x29 x86/page.o
+ .rodata.str1.1
+                0x000000000010a3c1        0xb x86/page.o
+ .rodata.str1.4
+                0x000000000010a3cc       0x20 x86/alloc.o
+ .rodata.str1.1
+                0x000000000010a3ec       0x10 x86/alloc.o
+ .rodata        0x000000000010a3fc       0x11 x86/alloc.o
+ *fill*         0x000000000010a40d        0x3 00
+ .rodata.str1.4
+                0x000000000010a410       0xd3 x86/info.o
+ .rodata.str1.1
+                0x000000000010a4e3       0x29 x86/info.o
+                                         0x2b (size before relaxing)
+ .rodata.str1.1
+                0x000000000010a50c       0x16 x86/tss.o
+                                         0x21 (size before relaxing)
+ *fill*         0x000000000010a522        0x2 00
+ .rodata.str1.4
+                0x000000000010a524      0x1de x86/intr.o
+ .rodata.str1.1
+                0x000000000010a702      0x153 x86/intr.o
+                                        0x155 (size before relaxing)
+ *fill*         0x000000000010a855        0x3 00
+ .rodata.str1.4
+                0x000000000010a858       0x8a x86/subject.o
+                                         0xaa (size before relaxing)
+ .rodata.str1.1
+                0x000000000010a8e2       0x5a x86/subject.o
+                                         0x74 (size before relaxing)
+ .rodata        0x000000000010a93c       0x51 x86/subject.o
+ .rodata.str1.4
+                0x0000000000000000       0x20 x86/schedule.o
+ .rodata.str1.1
+                0x0000000000000000       0x10 x86/schedule.o
+ .rodata        0x000000000010a98d       0x4b x86/schedule.o
+ .rodata.str1.4
+                0x000000000010a9d8       0x20 x86/paged.o
+                                         0x40 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000000000       0x10 x86/paged.o
+ .rodata        0x000000000010a9f8       0x6e x86/paged.o
+ .rodata.str1.4
+                0x0000000000000000       0x20 x86/security.o
+ .rodata.str1.1
+                0x0000000000000000       0x10 x86/security.o
+ .rodata        0x000000000010aa66        0xe x86/security.o
+ .rodata.str1.4
+                0x0000000000000000       0x20 x86/map.o
+ .rodata.str1.1
+                0x0000000000000000       0x10 x86/map.o
+ .rodata        0x000000000010aa74       0x29 x86/map.o
+ .rodata.str1.4
+                0x0000000000000000       0x20 x86/sync.o
+ .rodata.str1.1
+                0x0000000000000000       0x10 x86/sync.o
+ .rodata        0x000000000010aa9d       0x19 x86/sync.o
+ .rodata.str1.4
+                0x0000000000000000       0x20 x86/io.o
+ .rodata.str1.1
+                0x0000000000000000       0x10 x86/io.o
+ .rodata        0x000000000010aab6       0x2a x86/io.o
+ .rodata.str1.4
+                0x000000000010aae0       0x40 x86/remote.o
+                                         0x5e (size before relaxing)
+ .rodata.str1.1
+                0x0000000000000000       0x10 x86/remote.o
+ .rodata        0x000000000010ab20       0x32 x86/remote.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x000000000010ab52                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
+                0x000000000010bb52                . = (0x1000 DATA_SEGMENT_ALIGN 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x000000000010bb52        0x0
+                0x000000000010bb52                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x000000000010bb52                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x000000000010bb52        0x0
+                0x000000000010bb52                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x000000000010bb52                PROVIDE (__init_array_end, .)
+
+.fini_array     0x000000000010bb52        0x0
+                0x000000000010bb52                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+                0x000000000010bb52                PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+                0x000000000010bb52                . = (. DATA_SEGMENT_RELRO_END 0xc)
+
+.got.plt
+ *(.got.plt)
+
+.data           0x000000000010bb60      0x170
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000000010bb60        0x0 x86/start.o
+ .data          0x000000000010bb60        0x4 x86/init.o
+                0x000000000010bb60                kdebug_no_boot_mode
+ .data          0x000000000010bb64        0x8 x86/kprintf.o
+                0x000000000010bb68                l__column
+                0x000000000010bb64                l__line
+ .data          0x000000000010bb6c        0x0 x86/string.o
+ .data          0x000000000010bb6c        0x8 x86/modules.o
+                0x000000000010bb6c                grub_modules_list
+                0x000000000010bb70                grub_modules_num
+ .data          0x000000000010bb74       0x40 x86/meminit.o
+                0x000000000010bb90                page_buf_table_sz
+                0x000000000010bb8c                page_buf_table_start
+                0x000000000010bb9c                page_share_table_count
+                0x000000000010bba4                page_share_table_free
+                0x000000000010bb80                mem_start
+                0x000000000010bb94                page_buf_table
+                0x000000000010bb98                page_share_table_start
+                0x000000000010bb78                normal_mem_free
+                0x000000000010bb84                ikp_start
+                0x000000000010bbb0                page_buffer_sz
+                0x000000000010bb74                total_mem_size
+                0x000000000010bbac                page_buffer
+                0x000000000010bba8                page_buffer_start
+                0x000000000010bb88                ikp_size
+                0x000000000010bb7c                high_mem_free
+                0x000000000010bba0                page_share_table_sz
+ .data          0x000000000010bbb4        0x4 x86/page.o
+                0x000000000010bbb4                i386_current_pdir
+ .data          0x000000000010bbb8        0x0 x86/alloc.o
+ .data          0x000000000010bbb8       0x38 x86/info.o
+                0x000000000010bbd0                current_t
+                0x000000000010bbec                i386_do_pge
+                0x000000000010bbc4                process_tab
+                0x000000000010bbc0                main_info
+                0x000000000010bbd8                kinfo_rtc_ctr
+                0x000000000010bbd4                kinfo_eff_prior
+                0x000000000010bbbc                real_empty_info
+                0x000000000010bbe4                sysc_error
+                0x000000000010bbe8                i387_fsave
+                0x000000000010bbb8                real_main_info
+                0x000000000010bbdc                kinfo_io_map
+                0x000000000010bbc8                thread_tab
+                0x000000000010bbcc                current_p
+                0x000000000010bbe0                paged_pid
+ .data          0x000000000010bbf0        0x0 x86/tss.o
+ .data          0x000000000010bbf0        0x0 x86/frame.o
+ .data          0x000000000010bbf0        0x0 x86/irq.o
+ .data          0x000000000010bbf0        0x0 x86/intr.o
+ .data          0x000000000010bbf0        0x8 x86/subject.o
+                0x000000000010bbf0                ksubj_next_unique_process_id
+                0x000000000010bbf4                ksubj_next_unique_thread_id
+ .data          0x000000000010bbf8        0x8 x86/schedule.o
+                0x000000000010bbfc                ksched_change_thread
+                0x000000000010bbf8                ksched_active_threads
+ .data          0x000000000010bc00        0x4 x86/current.o
+                0x000000000010bc00                i386_initial_kernel_stack
+ .data          0x000000000010bc04        0x0 x86/sysc.o
+ .data          0x000000000010bc04        0x4 x86/paged.o
+                0x000000000010bc04                paged_thr_sid
+ .data          0x000000000010bc08        0x0 x86/security.o
+ .data          0x000000000010bc08        0x0 x86/map.o
+ .data          0x000000000010bc08        0x0 x86/sync.o
+ *fill*         0x000000000010bc08       0x18 00
+ .data          0x000000000010bc20       0xa0 x86/io.o
+                0x000000000010bc40                irq_handlers_s
+                0x000000000010bc24                kio_last_thread
+                0x000000000010bc20                kio_current_io
+ .data          0x000000000010bcc0        0x0 x86/remote.o
+ .data          0x000000000010bcc0       0x10 x86/timeout.o
+                0x000000000010bcc4                timeout_num
+                0x000000000010bcc8                timeout_next
+                0x000000000010bcc0                timeout_queue
+ *(.gnu.linkonce.d.*personality*)
+
+.data1
+ *(.data1)
+                0x000000000010bcd0                _edata = .
+                0x000000000010bcd0                PROVIDE (edata, .)
+                0x000000000010bcd0                __bss_start = .
+
+.bss            0x000000000010bce0      0x124
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000000000010bce0        0x0 x86/start.o
+ .bss           0x000000000010bce0        0x0 x86/init.o
+ .bss           0x000000000010bce0        0x0 x86/kprintf.o
+ .bss           0x000000000010bce0        0x0 x86/string.o
+ .bss           0x000000000010bce0        0x0 x86/modules.o
+ .bss           0x000000000010bce0        0x0 x86/meminit.o
+ .bss           0x000000000010bce0        0x0 x86/page.o
+ .bss           0x000000000010bce0        0x0 x86/alloc.o
+ .bss           0x000000000010bce0       0x28 x86/info.o
+ .bss           0x000000000010bd08        0x0 x86/tss.o
+ .bss           0x000000000010bd08        0x0 x86/frame.o
+ .bss           0x000000000010bd08        0x0 x86/irq.o
+ .bss           0x000000000010bd08        0x4 x86/intr.o
+ .bss           0x000000000010bd0c        0x0 x86/subject.o
+ .bss           0x000000000010bd0c        0x0 x86/schedule.o
+ .bss           0x000000000010bd0c        0x0 x86/current.o
+ .bss           0x000000000010bd0c        0x0 x86/sysc.o
+ .bss           0x000000000010bd0c        0x0 x86/paged.o
+ .bss           0x000000000010bd0c        0x0 x86/security.o
+ .bss           0x000000000010bd0c        0x0 x86/map.o
+ .bss           0x000000000010bd0c        0x0 x86/sync.o
+ .bss           0x000000000010bd0c        0x0 x86/io.o
+ .bss           0x000000000010bd0c        0x0 x86/remote.o
+ .bss           0x000000000010bd0c        0x0 x86/timeout.o
+ *(COMMON)
+ COMMON         0x000000000010bd0c       0x20 x86/meminit.o
+                0x000000000010bd0c                high_zone
+                0x000000000010bd1c                normal_zone
+ COMMON         0x000000000010bd2c        0x8 x86/tss.o
+                0x000000000010bd2c                i386_esp0_ret
+                0x000000000010bd30                i386_tss_struct
+ *fill*         0x000000000010bd34        0xc 00
+ COMMON         0x000000000010bd40       0xc0 x86/intr.o
+                0x000000000010bd40                ksched_irqt_s
+ COMMON         0x000000000010be00        0x4 x86/schedule.o
+                0x000000000010be00                ksched_idle_thread
+                0x000000000010be04                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x000000000010be04                . = ALIGN (0x4)
+                0x000000000010be04                . = ALIGN (0x4)
+                0x000000000010be04                _end = .
+                0x000000000010be04                PROVIDE (end, .)
+                0x000000000010be04                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x31e
+ *(.comment)
+ .comment       0x0000000000000000       0x26 x86/init.o
+ .comment       0x0000000000000026       0x26 x86/kprintf.o
+ .comment       0x000000000000004c       0x26 x86/string.o
+ .comment       0x0000000000000072       0x26 x86/modules.o
+ .comment       0x0000000000000098       0x26 x86/meminit.o
+ .comment       0x00000000000000be       0x26 x86/page.o
+ .comment       0x00000000000000e4       0x26 x86/alloc.o
+ .comment       0x000000000000010a       0x26 x86/info.o
+ .comment       0x0000000000000130       0x26 x86/tss.o
+ .comment       0x0000000000000156       0x26 x86/frame.o
+ .comment       0x000000000000017c       0x26 x86/intr.o
+ .comment       0x00000000000001a2       0x26 x86/subject.o
+ .comment       0x00000000000001c8       0x26 x86/schedule.o
+ .comment       0x00000000000001ee       0x26 x86/current.o
+ .comment       0x0000000000000214       0x26 x86/paged.o
+ .comment       0x000000000000023a       0x26 x86/security.o
+ .comment       0x0000000000000260       0x26 x86/map.o
+ .comment       0x0000000000000286       0x26 x86/sync.o
+ .comment       0x00000000000002ac       0x26 x86/io.o
+ .comment       0x00000000000002d2       0x26 x86/remote.o
+ .comment       0x00000000000002f8       0x26 x86/timeout.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+OUTPUT(../../bin/hymk.bin elf32-i386)
+
+.note           0x0000000000000000       0x28
+ .note          0x0000000000000000       0x14 x86/irq.o
+ .note          0x0000000000000014       0x14 x86/sysc.o
